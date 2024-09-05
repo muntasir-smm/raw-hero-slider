@@ -1,29 +1,27 @@
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
+const slideWrapper = document.querySelector('.slide-wrapper');
 const totalSlides = slides.length;
-
-// Initialize the first slide
-showSlide(currentSlide);
 
 // Function to show the current slide
 function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    slide.classList.add(i === index ? 'active' : 'right');
-  });
+    slideWrapper.style.transform = `translateX(-${index * 100}%)`;
 }
 
-// Go to the next slide
+// Function to move to the next slide
 function goToNextSlide() {
-  currentSlide = (currentSlide + 1) % totalSlides;
-  showSlide(currentSlide);
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
 }
 
-// Go to the previous slide
+// Function to move to the previous slide
 function goToPreviousSlide() {
-  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-  showSlide(currentSlide);
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
 }
 
-// Automatically change slide every 4 seconds
+// Initialize the slider
+showSlide(currentSlide);
+
+// Set up automatic sliding every 4 seconds
 setInterval(goToNextSlide, 4000);

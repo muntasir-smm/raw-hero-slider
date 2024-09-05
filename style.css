@@ -3,26 +3,21 @@
     position: relative;
     width: 100%;
     height: 450px;
-    margin: auto;
-    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Slide styling */
-.slide {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Slide container */
+.slide-wrapper {
+    display: flex;
+    transition: transform 1s ease-in-out;
     width: 100%;
-    height: 100%;
-    /* Ensure the slides take full height of the slider container */
-    transition: transform 1s ease;
 }
 
-.slide.active {
-    display: block;
+/* Slide styling */
+.slide {
+    min-width: 100%;
+    height: 450px;
     position: relative;
 }
 
@@ -31,7 +26,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensures the image covers the container without distorting */
 }
 
 /* Caption styling */
