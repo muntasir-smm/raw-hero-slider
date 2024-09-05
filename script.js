@@ -1,60 +1,71 @@
-document.addEventListener("DOMContentLoaded", function() {
-  let currentSlide = 0;
-  const slideWrapper = document.querySelector('.slide-wrapper');
-  const navButtons = document.querySelectorAll('.nav-button');
+document.addEventListener('DOMContentLoaded', () => {
+    let currentSlide = 0;
+    let slides = [];
+    let slideWrapper = document.querySelector('.slide-wrapper');
+    let indicatorsContainer = document.querySelector('.indicators');
 
-  // Fetch slide data from JSON
-  fetch('slidesData.json')
-    .then(response => response.json())
-    .then(data => {
-      const slides = data;
-      const totalSlides = slides.length;
-      
-      // Generate slides
-      slides.forEach((slide, index) => {
-        const slideElement = document.createElement('div');
-        slideElement.classList.add('slide');
-        slideElement.innerHTML = `
-          <img src="${slide.src}" alt="${slide.alt}">
-          <div class="caption">
-            <h2>${slide.title}</h2>
-            <p>${slide.description}</p>
-          </div>
+    // Fetch slide data
+    fetch('slidesData.json')
+        .then(response => response.json())
+        .then(data => {
+            slides = data;
+            loadSlides();
+            setupIndicators();
+            showSlide(currentSlide);
+        });
+
+    // Load slides into the slider
+    function loadSlides() {
+        slideWrapper.innerHTML = slides.map((slide) => `
+            <div class="slide">
+                <img src="${slide.src}" alt="${slide.title}">
+                <div class="caption">
+                    <h2>${slide.title}</h2>
+                    <p>${slide.description}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Setup indicators with the current slide number
+    function setupIndicators() {
+        indicatorsContainer.innerHTML = `
+            <div class="indicator ${currentSlide === 0 ? 'active' : ''}">
+                ${currentSlide + 1} / ${slides.length}
+            </div>
         `;
-        slideWrapper.appendChild(slideElement);
-      });
+    }
 
-      // Function to show the current slide
-      function showSlide(index) {
+    // Show slide by index
+    function showSlide(index) {
         slideWrapper.style.transform = `translateX(-${index * 100}%)`;
-      }
+        updateIndicators(index);
+    }
 
-      // Function to move to the next slide
-      function goToNextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
+    // Update indicators
+    function updateIndicators(index) {
+        currentSlide = index;
+        setupIndicators();
+    }
+
+    // Move to the next slide
+    window.goToNextSlide = function() {
+        currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
-      }
+    }
 
-      // Function to move to the previous slide
-      function goToPreviousSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    // Move to the previous slide
+    window.goToPreviousSlide = function() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         showSlide(currentSlide);
-      }
+    }
 
-      // Initialize the slider
-      showSlide(currentSlide);
+    // Move to a specific slide
+    window.goToSlide = function(index) {
+        currentSlide = index;
+        showSlide(currentSlide);
+    }
 
-      // Set up automatic sliding every 4 seconds
-      setInterval(goToNextSlide, 4000);
-
-      // Attach event listeners to navigation buttons
-      navButtons.forEach(button => {
-        if (button.classList.contains('prev')) {
-          button.addEventListener('click', goToPreviousSlide);
-        } else if (button.classList.contains('next')) {
-          button.addEventListener('click', goToNextSlide);
-        }
-      });
-    })
-    .catch(error => console.error('Error fetching slide data:', error));
+    // Auto-slide every 4 seconds
+    setInterval(goToNextSlide, 4000);
 });

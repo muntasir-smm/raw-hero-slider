@@ -11,12 +11,17 @@
 <body>
     <div class="slider-container">
         <div class="slide-wrapper">
-            <!-- Slides will be added dynamically here -->
+            <!-- Slides will be loaded here dynamically -->
         </div>
 
         <!-- Navigation Buttons -->
-        <button class="nav-button prev">&lt;</button>
-        <button class="nav-button next">&gt;</button>
+        <button class="nav-button prev" onclick="goToPreviousSlide()">&lt;</button>
+        <button class="nav-button next" onclick="goToNextSlide()">&gt;</button>
+
+        <!-- Indicator -->
+        <div class="indicators">
+            <!-- Indicator will be updated dynamically -->
+        </div>
     </div>
 
     <script src="script.js"></script>

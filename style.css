@@ -2,11 +2,10 @@
 .slider-container {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 450px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    /* Ensure content doesn't overflow */
 }
 
 /* Slide wrapper */
@@ -14,15 +13,12 @@
     display: flex;
     transition: transform 1s ease-in-out;
     width: 100%;
-    height: 100%;
 }
 
 /* Slide styling */
 .slide {
-    flex: 0 0 100%;
-    /* Ensure each slide takes up full width of the slider */
-    height: 100%;
-    /* Make sure slide takes full height of the container */
+    min-width: 100%;
+    height: 450px;
     position: relative;
 }
 
@@ -30,25 +26,49 @@
 .slide img {
     width: 100%;
     height: 100%;
-    /* Fill the height of the slide */
     object-fit: cover;
-    /* Cover the slide area */
 }
 
 /* Caption styling */
 .caption {
     position: absolute;
-    bottom: 10px;
+    bottom: 60px;
+    /* Adjust to make space for indicators */
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
+    color: white;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     width: 80%;
-    box-sizing: border-box;
-    /* Include padding in width calculation */
+}
+
+/* Indicator container */
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    /* Position below caption */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    /* Center the indicator */
+}
+
+/* Individual indicator */
+.indicator {
+    font-size: 14px;
+    /* Adjust font size as needed */
+    color: #666262;
+    /* Default color */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.indicator.active {
+    color: #ff0000;
+    /* Active color */
 }
 
 /* Navigation button styling */
@@ -74,14 +94,13 @@
 }
 
 .nav-button:hover {
-    background-color: rgba(246, 118, 118, 0.7);
-    /* Adjust hover color */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     .slider-container {
-        height: 300px;
+        height: 450px;
     }
 
     .caption h2 {
@@ -96,11 +115,16 @@
         font-size: 1.5rem;
         padding: 8px;
     }
+
+    .indicators {
+        bottom: 10px;
+        /* Adjust for smaller screens */
+    }
 }
 
 @media screen and (max-width: 480px) {
     .slider-container {
-        height: 200px;
+        height: 450px;
     }
 
     .caption h2 {
@@ -114,5 +138,10 @@
     .nav-button {
         font-size: 1.2rem;
         padding: 6px;
+    }
+
+    .indicators {
+        bottom: 5px;
+        /* Adjust for smaller screens */
     }
 }
