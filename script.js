@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const slideElement = document.createElement('div');
         slideElement.classList.add('slide');
         slideElement.innerHTML = `
-          <img src="${slide.src}" alt="Slide ${index + 1}">
+          <img src="${slide.src}" alt="${slide.alt}">
           <div class="caption">
             <h2>${slide.title}</h2>
             <p>${slide.description}</p>

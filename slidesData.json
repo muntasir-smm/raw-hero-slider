@@ -1,22 +1,212 @@
 [
   {
+    "id": 1,
     "src": "images/hero1.jpg",
     "title": "Butterfly",
-    "description": "Butterfly on the flower"
+    "description": "Butterfly on the flower",
+    "alt": "Butterfly on the flower"
   },
   {
+    "id": 2,
     "src": "images/hero2.jpg",
     "title": "Tulip",
-    "description": "Colorful Tulip"
+    "description": "Colorful Tulip",
+    "alt": "Colorful Tulip"
   },
   {
+    "id": 3,
     "src": "images/hero3.jpg",
     "title": "Rain",
-    "description": "Rain drop on a leaf"
+    "description": "Rain drop on a leaf",
+    "alt": "Rain drop on a leaf"
   },
   {
+    "id": 4,
     "src": "images/hero4.jpg",
     "title": "Sunset",
-    "description": "Sunset and white flower"
+    "description": "Sunset and white flower",
+    "alt": "Sunset and white flower"
+  },
+  {
+    "id": 5,
+    "src": "images/hero5.jpg",
+    "title": "Mountain View",
+    "description": "A beautiful view of a mountain",
+    "alt": "A beautiful view of a mountain"
+  },
+  {
+    "id": 6,
+    "src": "images/hero6.jpg",
+    "title": "Ocean Sunset",
+    "description": "Sun setting over the ocean",
+    "alt": "Sun setting over the ocean"
+  },
+  {
+    "id": 7,
+    "src": "images/hero7.jpg",
+    "title": "Forest Trail",
+    "description": "Trail through a dense forest",
+    "alt": "Trail through a dense forest"
+  },
+  {
+    "id": 8,
+    "src": "images/hero8.jpg",
+    "title": "City Skyline",
+    "description": "Skyline of a modern city",
+    "alt": "Skyline of a modern city"
+  },
+  {
+    "id": 9,
+    "src": "images/hero9.jpg",
+    "title": "Desert Dunes",
+    "description": "Rolling dunes in the desert",
+    "alt": "Rolling dunes in the desert"
+  },
+  {
+    "id": 10,
+    "src": "images/hero10.jpg",
+    "title": "Snowy Mountains",
+    "description": "Snow-covered mountain peaks",
+    "alt": "Snow-covered mountain peaks"
+  },
+  {
+    "id": 11,
+    "src": "images/hero11.jpg",
+    "title": "Tropical Beach",
+    "description": "White sandy beach with palm trees",
+    "alt": "White sandy beach with palm trees"
+  },
+  {
+    "id": 12,
+    "src": "images/hero12.jpg",
+    "title": "Night Sky",
+    "description": "Clear night sky full of stars",
+    "alt": "Clear night sky full of stars"
+  },
+  {
+    "id": 13,
+    "src": "images/hero13.jpg",
+    "title": "River Valley",
+    "description": "A calm river flowing through a valley",
+    "alt": "A calm river flowing through a valley"
+  },
+  {
+    "id": 14,
+    "src": "images/hero14.jpg",
+    "title": "Autumn Leaves",
+    "description": "Autumn leaves covering the ground",
+    "alt": "Autumn leaves covering the ground"
+  },
+  {
+    "id": 15,
+    "src": "images/hero15.jpg",
+    "title": "Waterfall",
+    "description": "Waterfall in a lush forest",
+    "alt": "Waterfall in a lush forest"
+  },
+  {
+    "id": 16,
+    "src": "images/hero16.jpg",
+    "title": "Sunny Meadow",
+    "description": "Sunny meadow with wildflowers",
+    "alt": "Sunny meadow with wildflowers"
+  },
+  {
+    "id": 17,
+    "src": "images/hero17.jpg",
+    "title": "Canyon",
+    "description": "A deep canyon with rocky cliffs",
+    "alt": "A deep canyon with rocky cliffs"
+  },
+  {
+    "id": 18,
+    "src": "images/hero18.jpg",
+    "title": "Lake Reflection",
+    "description": "Mountains reflected in a calm lake",
+    "alt": "Mountains reflected in a calm lake"
+  },
+  {
+    "id": 19,
+    "src": "images/hero19.jpg",
+    "title": "Field of Tulips",
+    "description": "Vibrant tulip field under a blue sky",
+    "alt": "Vibrant tulip field under a blue sky"
+  },
+  {
+    "id": 20,
+    "src": "images/hero20.jpg",
+    "title": "Mountain Lake",
+    "description": "Crystal clear lake with mountains",
+    "alt": "Crystal clear lake with mountains"
+  },
+  {
+    "id": 21,
+    "src": "images/hero21.jpg",
+    "title": "Sunrise Over Hills",
+    "description": "Sun rising over green rolling hills",
+    "alt": "Sun rising over green rolling hills"
+  },
+  {
+    "id": 22,
+    "src": "images/hero22.jpg",
+    "title": "Cliffside",
+    "description": "View from a cliff overlooking the ocean",
+    "alt": "View from a cliff overlooking the ocean"
+  },
+  {
+    "id": 23,
+    "src": "images/hero23.jpg",
+    "title": "Foggy Forest",
+    "description": "Fog enveloping a dense forest",
+    "alt": "Fog enveloping a dense forest"
+  },
+  {
+    "id": 24,
+    "src": "images/hero24.jpg",
+    "title": "Rocky Coastline",
+    "description": "Waves crashing on rocky shores",
+    "alt": "Waves crashing on rocky shores"
+  },
+  {
+    "id": 25,
+    "src": "images/hero25.jpg",
+    "title": "Serene Beach",
+    "description": "A calm, empty beach with golden sands",
+    "alt": "A calm, empty beach with golden sands"
+  },
+  {
+    "id": 26,
+    "src": "images/hero26.jpg",
+    "title": "Lush Green Valley",
+    "description": "A vibrant green valley with a river",
+    "alt": "A vibrant green valley with a river"
+  },
+  {
+    "id": 27,
+    "src": "images/hero27.jpg",
+    "title": "Volcano Eruption",
+    "description": "Smoke and lava from an erupting volcano",
+    "alt": "Smoke and lava from an erupting volcano"
+  },
+  {
+    "id": 28,
+    "src": "images/hero28.jpg",
+    "title": "Winding River",
+    "description": "A river winding through lush forests",
+    "alt": "A river winding through lush forests"
+  },
+  {
+    "id": 29,
+    "src": "images/hero29.jpg",
+    "title": "Starry Night",
+    "description": "A night sky filled with stars over mountains",
+    "alt": "A night sky filled with stars over mountains"
+  },
+  {
+    "id": 30,
+    "src": "images/hero30.jpg",
+    "title": "Misty Lake",
+    "description": "A misty lake surrounded by trees",
+    "alt": "A misty lake surrounded by trees"
   }
 ]
