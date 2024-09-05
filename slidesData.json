@@ -1,0 +1,22 @@
+[
+  {
+    "src": "images/hero1.jpg",
+    "title": "Butterfly",
+    "description": "Butterfly on the flower"
+  },
+  {
+    "src": "images/hero2.jpg",
+    "title": "Tulip",
+    "description": "Colorful Tulip"
+  },
+  {
+    "src": "images/hero3.jpg",
+    "title": "Rain",
+    "description": "Rain drop on a leaf"
+  },
+  {
+    "src": "images/hero4.jpg",
+    "title": "Sunset",
+    "description": "Sunset and white flower"
+  }
+]
